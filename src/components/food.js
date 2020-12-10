@@ -144,7 +144,7 @@ export default function Food() {
         },
         { 
             id:12,
-            name: "Tetra Temprature Flakes(Good Quality)",
+            name: "Tetra Temperature Flakes(Good Quality)",
             price: 230 ,
             img:"/img/fooddata/fishh.jpg",
             pack_size:"1000ml",
