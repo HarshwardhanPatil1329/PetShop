@@ -18,8 +18,18 @@ class Navbar extends Component {npm
             
           </li>
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
+            <Link to="/food" className="nav-link">
               Pet Food
+            </Link>
+          </li>
+          <li className="nav-item ml-5">
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
+          </li>
+          <li className="nav-item ml-5">
+            <Link to="/contact" className="nav-link">
+              Contact
             </Link>
           </li>
         </ul>

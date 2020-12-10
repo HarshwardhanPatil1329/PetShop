@@ -27,7 +27,7 @@ export const storeProducts = [
   },
   {
     id: 3,
-    title: "Rottweiler",
+    title: "Golden Retriever",
     img: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf9wM9Rvw_iHo4W4peh-wAamq7tU4ITjSnUA&usqp=CAU",
     price: 4000,
     animal_Type: "Dog",

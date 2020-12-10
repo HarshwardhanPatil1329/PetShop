@@ -6,15 +6,24 @@ import { ProductConsumer } from "../context";
 class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
+    const { removeTour } = this.props;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
+        <span
+                   className="close-btn"
+                   onClick={() => {
+                    removeTour(id); }}
+                  >
+                      <i className="fas fa-window-close" />
+                  </span>
           <ProductConsumer>
             {value => (
               <div
                 className="img-container p-5"
                 onClick={() => value.handleDetail(id)}
               >
+                
                 <Link to="/details">
                   <img src={img} alt="product" className="card-img-top" />
                 </Link>
@@ -79,12 +88,14 @@ const ProductWrapper = styled.div`
   }
   .card-img-top {
      transition: all 1s linear;
-    width:150px;
+     width:150px;
     height:100px;
     // padding:20px;
   }
   .img-container:hover .card-img-top {
     transform: scale(1.1);
+    width:150px;
+    height:100px;
   }
   .card-btn {
     position: absolute;
@@ -105,6 +116,16 @@ const ProductWrapper = styled.div`
   .card-btn:hover {
     color: var(--mainBlue);
     cursor: pointer;
+  }
+  .close-btn {
+   
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size:30px;
+    
+    color: green;
+    
   }
 `;
 export default Product;
