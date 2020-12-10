@@ -145,6 +145,7 @@ class ProductProvider extends Component {
       }
     );
   };
+ 
   addTotals = () => {
     let subtotal = 0;
     this.state.cart.map(item => (subtotal += item.total));
@@ -159,6 +160,13 @@ class ProductProvider extends Component {
       };
     });
   };
+   proceed = () =>{
+    this.setState(
+      () =>{
+        return alert("Successfully Done");
+      }
+    )
+  }
   render() {
     return (
       <ProductContext.Provider
@@ -171,7 +179,8 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
-          clearCart: this.clearCart
+          clearCart: this.clearCart,
+          proceed:this.proceed
         }}
       >
         {this.props.children}

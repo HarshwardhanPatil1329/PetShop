@@ -11,7 +11,7 @@ export default function Contact()
                     margin:"0 auto",
                     position:"relative"
                 }}>  
-                        <form id="contact" action="" method="post">
+                        <form id="contact" >
                             <h3>Quick Contact</h3>
                             <h4>Contact us today, and get reply with in 24 hours!</h4>
                             <fieldset>

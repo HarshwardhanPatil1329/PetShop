@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 export default function CartTotals({ value }) {
-  const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
+  const { cartSubTotal, cartTax, cartTotal, clearCart ,proceed} = value;
+  const SweetAlert = require('react-bootstrap-sweetalert');
+  
+
   return (
     <React.Fragment>
       <div className="container">
@@ -28,8 +32,22 @@ export default function CartTotals({ value }) {
               <span className="text-title">cartTotal :</span>
               <strong>$ {cartTotal}</strong>
             </h5>
+            <Link to="/">
+              <button
+                className="btn btn-outline-danger text-uppercase mb-3 px-5"
+                type="button"
+                onClick={() => proceed()}
+              >
+                Proceed
+              </button>
+            </Link>
+            
+
+                
+              
           </div>
         </div>
+        
       </div>
     </React.Fragment>
   );
