@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { ButtonContainer } from "./Button";
 class Details extends Component {
   render() {
@@ -51,6 +52,8 @@ class Details extends Component {
                       onClick={() => {
                         value.addToCart(id);
                         value.openModal(id);
+                        // alert("added to cart");
+                        Swal.fire('Added to Cart');
                       }}
                     >
                       {inCart ? "inCart" : "add  to cart"}

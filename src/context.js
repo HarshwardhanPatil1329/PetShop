@@ -163,7 +163,12 @@ class ProductProvider extends Component {
    proceed = () =>{
     this.setState(
       () =>{
-        return alert("Successfully Done");
+        // return alert("Successfully Done");
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.addTotals();
       }
     )
   }

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Swal from "sweetalert2"; 
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
+
 
 class Product extends Component {
   render() {
@@ -15,7 +17,7 @@ class Product extends Component {
                    onClick={() => {
                     removeTour(id); }}
                   >
-                      <i className="fas fa-window-close" />
+                      {/* <i className="fas fa-window-close" /> */}
                   </span>
           <ProductConsumer>
             {value => (
@@ -33,6 +35,8 @@ class Product extends Component {
                   onClick={() => {
                     value.addToCart(id);
                     value.openModal(id);
+                    // alert("Added to cart");
+                    Swal.fire('Added to Cart')
                   }}
                 >
                   {inCart ? (
